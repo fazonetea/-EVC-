@@ -1876,27 +1876,7 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
             with gr.Row():
                 vc_output1 = gr.Textbox(label="Output Information:")
                 f0_file = gr.File(label=i18n("F0曲线文件, 可选, 一行一个音高, 代替默认F0及升降调"), visible=False)
-                fast_audio.stop_recording(
-                    fn=fast,
-                    inputs=[
-                        fast_audio,
-                        spk_item,
-                        vc_transform0,
-                        f0method0,
-                        file_index1,
-                        index_rate1,
-                        filter_radius0,
-                        resample_sr0,
-                        rms_mix_rate0,
-                        protect0,
-                        crepe_hop_length
-                        ],
-                    outputs=[
-                        fast_result,
-                        fast_audio, 
-                        vc_output1
-                        ]
-                    )
+               
                 but0.click(
                     vc_single,
                     [
